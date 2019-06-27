@@ -1,0 +1,19 @@
+#imports the ability to get a random number (we will learn more about this later!)
+from random import *
+
+
+#Create the list of words you want to choose from.
+def generatemenu():
+sides = ["Salad", "french fries", "fruits", "baked potato", "cheese"]
+meal = ["steak", "pho", "sushi", "don Katsu", "bacon and egg", "cream pasta"]
+drink = ["water", "coke", "lemonade", "fruit juice", "milkshake"]
+dessert = ["cheesecake", "pudding", "chips", "brownies", "ice cream"]
+#Generates a random integer.
+aRandomIndex = randint(0, len(sides)-1)
+aRandomInde = randint(0, len(meal)-1)
+aRandomInd = randint(0, len(drink)-1)
+aRandomIn = randint(0, len(dessert)-1)
+print (sides[aRandomIndex])
+print (meal[aRandomInde])
+print (drink[aRandomInd])
+print (dessert[aRandomIn])
