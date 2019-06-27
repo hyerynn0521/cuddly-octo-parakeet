@@ -1,0 +1,92 @@
+# --- Define your functions below! ---
+from random import *
+def intro():
+    answer = input ("hi, what do you want my name to be?")
+    print("hello! my name is " + answer + "." + " I am here to make you feel better!")
+def haiku():
+    FiveSyllable = ["You are amazing", "I hope to meet you", "you are beautiful", "See you later friend"]
+    SevenSyllable = ["I really know you miss me friend", "we are in this together"]
+    fivesyllable2 = ["I miss you so much", "you are so awesome", "world is good with you", "you are the best best"]
+    aRandomIndex = randint(0, len(FiveSyllable)-1)
+    aRandomInde = randint(0, len(SevenSyllable)-1)
+    aRandomInd = randint(0, len(fivesyllable2)-1)
+    print (FiveSyllable[aRandomIndex])
+    print (SevenSyllable[aRandomInde])
+    print (fivesyllable2[aRandomInd])
+def generatemenu():
+    sides = ["Salad", "french fries", "fruits", "baked potato", "cheese"]
+    meal = ["steak", "pho", "sushi", "don Katsu", "bacon and egg", "cream pasta"]
+    drink = ["water", "coke", "lemonade", "fruit juice", "milkshake"]
+    dessert = ["cheesecake", "pudding", "chips", "brownies", "ice cream"]
+    #Generates a random integer.
+    aRandomIndex = randint(0, len(sides)-1)
+    aRandomInde = randint(0, len(meal)-1)
+    aRandomInd = randint(0, len(drink)-1)
+    aRandomIn = randint(0, len(dessert)-1)
+    print (sides[aRandomIndex])
+    print (meal[aRandomInde])
+    print (drink[aRandomInd])
+    print (dessert[aRandomIn])
+def doyouwantmenugenerator():
+    answer_4 = input ("would you also want a menu generator?")
+    if answer_4 == "yes" or answer_4 == "of course":
+        print("okay, here it is!:")
+        generatemenu()
+    else:
+        print ("okay, have a good day!")
+
+# --- Put your main program below! ---
+def main():
+    for i in range (1):
+        intro()
+        username = input ("what is your name?")
+        print ("Hi, " + username + "!" )
+        answer_2 = input ("Nice to meet you! How are you today (type good or bad)?")
+        if answer_2 == "good":
+            print ("That's nice!")
+            answer_3 = input ("do you want me to generate a haiku for you (yes or no)? ")
+            if answer_3 == "yes":
+                haiku()
+                doyouwantmenugenerator()
+            elif answer_3 == "no":
+                answer = input ("do you want to know what's for dinner?")
+                if answer == "yes":
+                    answer_4 = input ("okay then, would you want a menu generator?")
+                if answer_4 == "yes":
+                    print("okay, here it is!:")
+                    generatemenu()
+                else:
+                    print ("okay, have a good day!")
+
+        elif answer_2 == "bad":
+            answer_3 = input ("what happened?")
+            print ("oh no! im so sorry! To make you feel better, I will make a haiku poem:")
+            answer = input ("Do you want a haiku poem (yes or no)? ")
+            if answer == "yes":
+                haiku()
+                doyouwantmenugenerator()
+            if answer == "no":
+                doyouwantmenugenerator()
+
+
+        else:
+            answer_3 = input ("that's not bad! what have you been up to these days?")
+            if answer_3 == "homework":
+                print ("ugh, I hate homeworks! but i'll make a haiku for you!")
+                answer = input ("Do you want a haiku poem (yes or no)? ")
+                if answer == "yes":
+                    haiku()
+                    doyouwantmenugenerator()
+            else:
+                print ("that's really fun! To make it more fun, i'll make a haiku:D")
+                haiku()
+                doyouwantmenugenerator()
+
+
+
+
+
+
+
+# DON'T TOUCH! Setup code that runs your main() function.
+main()
