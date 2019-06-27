@@ -1,0 +1,18 @@
+#imports the ability to get a random number (we will learn more about this later!)
+from random import *
+
+#Create the list of words you want to choose from.
+aList = [0, 1]
+
+#Generates a random integer.
+def haiku():
+    from random import *
+    FiveSyllable = ["You are amazing", "I hope to meet you", "you are beautiful", "See you later boy"]
+    SevenSyllable = ["I really know you miss me friend", "we are in this together", "If you like me and love me"]
+    fivesyllable2 = ["I miss you so much", "you are so awesome", "world is good with you", "you are the best best"]
+    aRandomIndex = randint(0, len(FiveSyllable)-1)
+    aRandomInde = randint(0, len(SevenSyllable)-1)
+    aRandomInd = randint(0, len(fivesyllable2)-1)
+    print (FiveSyllable[aRandomIndex])
+    print (SevenSyllable[aRandomInde])
+    print (fivesyllable2[aRandomInd])
