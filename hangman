@@ -1,0 +1,30 @@
+import random
+
+# A list of words that
+potential_words = ["example", "words", "someone", "can", "guess"]
+word = random.choice(potential_words)
+word = word.lower()
+current_word = []
+guesses = []
+maxfails = 7
+fails = 0
+words = list(word)
+for letter in word:
+    current_word.append("_")
+while fails < maxfails:
+    print(current_word)
+    guess = input("Guess a letter: ")
+    if guess in word:
+        for i in range (len(word)):
+            if guess == words[i]:
+                current_word[i] = guess
+    # 	# check if the guess is valid: Is it one letter? Have they already guessed it?
+    #e
+    # 	# check if the guess is correct: Is itc in the word? If so, reveal the letters!
+    else:
+        fails = fails+1
+    print("You have " + str(maxfails - fails) + " tries left!")
+    if current_word == words:
+        print("congrats! You guessed the word correctly!")
+        break
+
