@@ -1,0 +1,53 @@
+import json
+from textblob import TextBlob
+from wordcloud import WordCloud
+import matplotlib
+matplotlib.use('TkAgg')
+import matplotlib.pyplot as plt
+# from wordcloud import WordCloud
+# filteredwords = {"word": "and","do","not", "with", "but", "now", "http", ".com"}
+# filteredWords[word] = count
+tweetFile = open("tweets_small.json", "r")
+tweetData = json.load(tweetFile)
+tweetFile.close()
+ls = [[], []]
+
+
+for i in range(1):
+    for each in tweetData:
+        tweet = each["text"]
+        ls[0].append(tweet)
+        tb = TextBlob(each["text"])
+def convert(ls):
+    new = ""
+    for x in ls[0]:
+        new += x
+    return new
+# print(convert(ls))
+TextBlob(tb)
+
+
+
+# plt.hist(ls[0], 50, normed =1, facecolor='y', alpha=0.75 )
+# plt.xlabel('polarity')
+# plt.ylabel('probability')
+# plt.title('histogram of frequency of polarity')
+# plt.grid(True)
+# plt.show()
+
+
+
+
+# avgpol = (sum(ls[0]))/(len(ls[0]))
+# avgsub = (sum(ls[1]))/(len(ls[1]))
+# print("average polarity:")
+# print (avgpol)
+# print()
+# print("average subjectivity:")
+# print(avgsub)
+# for each in TextBlob:
+#     tb = TextBlob(each)
+#     print(tb.polarity)
+#
+# polarity = []
+# subjectivity = []
